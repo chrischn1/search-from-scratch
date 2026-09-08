@@ -5,8 +5,9 @@ No search library, no embedding API, no vector database. The ranking functions,
 the tokeniser, the inverted term matrix and the dimensionality reduction are all
 implemented here so that every scoring decision is visible and can be changed.
 
-It answers a question that a plain keyword search cannot: what do I do when the
-document I want never uses the word I typed. A lexical ranker scores a document
+A better local search box than the shitty one built in, it even helps when you ponder 
+what do I do when the document I want never uses the word I typed. 
+A lexical ranker scores a document
 by the query words it contains, so a page about canon formation is invisible to
 the query "reading list chosen by teachers". A latent semantic ranker scores it
 by position in a reduced concept space built from the whole corpus, so that page
