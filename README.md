@@ -8,11 +8,15 @@ implemented here so that every scoring decision is visible and can be changed.
 A better local search box than the shitty one built in, it even helps when you ponder 
 what do I do when the document I want never uses the word I typed. 
 A lexical ranker scores a document
-by the query words it contains, so a page about canon formation is invisible to
-the query "reading list chosen by teachers". A latent semantic ranker scores it
-by position in a reduced concept space built from the whole corpus, so that page
-comes back first. Running both and adding the results keeps the precision of the
-lexical match and adds the recall of the semantic one.
+by the query words it actually contains. A latent semantic ranker scores it by
+position in a concept space built from the whole corpus, which lets a document
+match a query it shares no vocabulary with. Running both and adding the results
+is meant to keep the precision of the first and add the recall of the second.
+
+On the eight document demo corpus the two rankers mostly agree, so the semantic
+half earns little there. The gap opens on a real corpus, where the vocabulary is
+large enough that a query and the document answering it often fail to overlap.
+Judge the idea on your own notes rather than on the sample.
 
 ## Run it
 
